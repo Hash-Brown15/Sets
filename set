@@ -1,0 +1,16 @@
+def is_panagram(input_string):
+    #Define the set of all alphabet letters
+    alphabet_set=set("abcdefghijklmnopqrstuvwxyz")
+
+    #Convert the input string to lowercase and create a set of unique letters
+    input_set=set(input_string.lower())
+
+    #Check if all letters in the alphabet set are in the input set
+    return alphabet_set.issubset(input_set)
+
+#Exampleusage
+input_string=input("Enter a sentence: ")
+if is_panagram(input_string):
+    print("Your sentence is a panagram.")
+else:
+    print("Your sentence is not a panagram.")
